@@ -1,0 +1,25 @@
+<h3>Liste des missions</h3>
+
+     <h2>Domaine : {{domaine.name}}</h2>
+     <h2>IdentifiantDomaine : {{domaine.id}}</h2>
+      <h2>liste missions :</h2>
+<div class="mission-lis-item" *ngFor="let item of items">
+ <!-- <div class='nom-mission'*ngIf="!item.mission">
+    Pas de mission, veuiller editer en appuyant sur Editer mission
+  </div> -->
+  <span>{{ item.mission }}</span>
+ <div class='domaineMap'*ngIf="item.domaineID==domaineId">
+    affiche la bonne liste avec if {{domaine.id}}
+    <span>{{ item.mission }}</span>
+  </div>
+
+</div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-collapse">
+        <h3 routerLinkActive="active"><a routerLink="/editer-mission" >Editer mission</a></h3>
+    </div>
+  </div>
+</nav>
+

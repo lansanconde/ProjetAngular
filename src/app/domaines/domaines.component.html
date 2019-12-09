@@ -1,0 +1,17 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Domaines</mat-toolbar>
+    <div *ngFor="let domaine of domaines; index as domaineId">
+          <mat-nav-list >
+              <a mat-list-item href="#" [title]="domaine.name + ' details'" [routerLink]="['/domaines', domaineId]" (click)="onSubmitDomaine(domaine.name)">
+                {{ domaine.name}}</a>
+          </mat-nav-list>
+    </div>
+    <p> {{getSubmitDomaine()}}</p>
+  </mat-sidenav>
+
+</mat-sidenav-container>
+

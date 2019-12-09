@@ -1,0 +1,53 @@
+<form  [formGroup]="editMission" (ngSubmit)="ficheMission()">
+  <div class="form-group">
+    <label>Nom de la mission</label>
+    <input type="text" class="form-control" formControlName="mission">
+  </div>
+  <div class="form-group">
+    <label>Nom du client</label>
+    <input type="text" class="form-control" formControlName="client">
+  </div>
+  <div class="form-group">
+    <label>Ville</label>
+    <input type="text" class="form-control" formControlName="ville">
+  </div>
+  <div class="form-group">
+    <label>Departement</label>
+    <input type="text" class="form-control" formControlName="departement">
+  </div>
+  <div class="form-group">
+    <label>Année debut de la mission</label>
+    <input type="text" class="form-control" formControlName="anneeDebut">
+  </div>
+  <div class="form-group">
+    <label>Année fin de la mission</label>
+    <input type="text" class="form-control" formControlName="anneeFin">
+  </div>
+  <div class="form-group">
+    <label>Montant</label>
+    <input type="text" class="form-control" formControlName="montant">
+  </div>
+  <div class="form-group">
+    <label>Détail</label>
+    <input type="text" class="form-control" formControlName="detail">
+  </div>
+  <div class="form-group">
+    <label>Image</label>
+    <input type="text" class="form-control" formControlName="image">
+  </div>
+  <div class="form-group">
+    <label>domaineID</label>
+    <input type="text" class="form-control" formControlName="domaineID">
+  </div>
+  <div class="form-group">
+    <label>domaineNom</label>
+    <input type="text" class="form-control" formControlName="domaineNom">
+  </div>
+
+  <button type="submit" class="btn btn-primary" click="ficheMission()">Entregistrer</button>
+</form>
+
+<div class="navbar-collapse">
+  <h3 routerLinkActive="active"><a routerLink="/missions-list">Afficher la liste des missions</a></h3>
+</div>
+<p>{{getDomaineNom()}}</p>
